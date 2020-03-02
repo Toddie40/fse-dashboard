@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import clip from './../utils/mathutils'
 
 
-class BR187 extends Component{
+export default class BR187 extends Component{
   
     constructor(props){
       super(props);
@@ -13,8 +13,11 @@ class BR187 extends Component{
       this.handleTypeChange = this.handleTypeChange.bind(this)
       this.onChangeSprinklered = this.onChangeSprinklered.bind(this)
       this.state = this.resetState();
+      this.name = 'BR187'
     };
-    
+    toString(){
+      return this.name;
+    }
     async onSubmit(e) {
       e.preventDefault();
       this.calculateResults()
