@@ -13,21 +13,19 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+/*remove spinner from numer inputs*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+/* Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
 }
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +34,8 @@
     transform: rotate(360deg);
   }
 }
+
+$theme-colors: (
+  "primary": #009999,
+  "danger": #ff4136
+);
