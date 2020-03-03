@@ -13,13 +13,12 @@ export default class FileNameConvention extends Component{
         this.onChangeSecurityStatus = this.onChangeSecurityStatus.bind(this);
         this.copyToClipboard = this.copyToClipboard.bind(this);
         this.name = 'File Naming Convention'
-        this.dateObject = new Date();
         this.state = this.resetState();
     }
 
     resetState(){
         return{
-            date: ofrify(this.dateObject),
+            date: new Date(),
             revision: "Q00",
             project: "MAXXXXX",
             stage: "WP1",
@@ -37,13 +36,13 @@ export default class FileNameConvention extends Component{
 
     onChangeDate(e){
         this.setState({
-            date: ofrify(e.target.value)
+            date: e.target.value
         });
     }
 
     onChangeRevision(e){
         this.setState({
-            revision: e.target.value.split(':')[0]
+            revision: e.target.value
         });
     }
 
@@ -65,19 +64,28 @@ export default class FileNameConvention extends Component{
 
     onChangeType(e){
         this.setState({
-            type: e.target.value.split(':')[0]
+            type: e.target.value
         });
     }
     onChangeSecurityStatus(e){
         this.setState({
-            securityStatus: e.target.value.split(':')[0]
+            securityStatus: e.target.value
         });
     }
     createFilename(){
         let filename = [];
-        for (var state_key in this.state){
-            filename.push(this.state[state_key]);
-        }
+        
+        //this is a bit of a messy way to do it, but looping through doesn't work 
+        //as some values are stored differently than how they should appear in the filename
+        //it's important that states are stored as the exact value the html expects
+
+        filename.push(ofrify(this.state.date));
+        filename.push(this.state.revision.split(':')[0]);
+        filename.push(this.state.project);
+        filename.push(this.state.stage);
+        filename.push(this.state.title);
+        filename.push(this.state.type.split(':')[0]);
+        filename.push(this.state.securityStatus.split(':')[0]);
         filename = filename.join('-');
         return filename;
     }
