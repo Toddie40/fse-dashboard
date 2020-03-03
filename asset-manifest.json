@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/fse-dashboard/static/css/main.84c95b46.chunk.css",
+    "main.js": "/fse-dashboard/static/js/main.e44e8e7b.chunk.js",
+    "main.js.map": "/fse-dashboard/static/js/main.e44e8e7b.chunk.js.map",
+    "runtime-main.js": "/fse-dashboard/static/js/runtime-main.04c2cc85.js",
+    "runtime-main.js.map": "/fse-dashboard/static/js/runtime-main.04c2cc85.js.map",
+    "static/css/2.47e06e2e.chunk.css": "/fse-dashboard/static/css/2.47e06e2e.chunk.css",
+    "static/js/2.5a5d90c8.chunk.js": "/fse-dashboard/static/js/2.5a5d90c8.chunk.js",
+    "static/js/2.5a5d90c8.chunk.js.map": "/fse-dashboard/static/js/2.5a5d90c8.chunk.js.map",
+    "index.html": "/fse-dashboard/index.html",
+    "precache-manifest.d3e80714bad8a21155dca7621d32551d.js": "/fse-dashboard/precache-manifest.d3e80714bad8a21155dca7621d32551d.js",
+    "service-worker.js": "/fse-dashboard/service-worker.js",
+    "static/css/2.47e06e2e.chunk.css.map": "/fse-dashboard/static/css/2.47e06e2e.chunk.css.map",
+    "static/css/main.84c95b46.chunk.css.map": "/fse-dashboard/static/css/main.84c95b46.chunk.css.map",
+    "static/js/2.5a5d90c8.chunk.js.LICENSE.txt": "/fse-dashboard/static/js/2.5a5d90c8.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/fse-dashboard/static/media/logo.ee7cd8ed.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.04c2cc85.js",
+    "static/css/2.47e06e2e.chunk.css",
+    "static/js/2.5a5d90c8.chunk.js",
+    "static/css/main.84c95b46.chunk.css",
+    "static/js/main.e44e8e7b.chunk.js"
+  ]
+}
