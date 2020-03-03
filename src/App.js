@@ -5,17 +5,17 @@ import './App.scss';
 import BR187 from './components/br187.component.js'
 import Home from './components/home.component.js'
 import About from './components/about.component.js'
-
+import FileNameConvention from './components/filename.component';
 
 class App extends Component{
-  
   constructor(props){
     super(props);
     this.state = this.resetState();
     this.onPressModule = this.onPressModule.bind(this);
     this.modules = {}
     this.createModules()
-    this.state = this.resetState(this.modules.home);
+    const homepage = this.modules.filenaming;
+    this.state = this.resetState(homepage); 
   };
   
   resetState(startingModule){
@@ -38,6 +38,7 @@ class App extends Component{
   createModules(){
     this.modules= {
       home: Home,
+      filenaming: FileNameConvention,
       br187: BR187,
       about: About
     }
