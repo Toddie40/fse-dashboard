@@ -224,7 +224,7 @@ export default class BR187 extends Component{
                 <h5>View Factor: {this.state.viewfactor}</h5>
                 <div className="row mx-auto">
                 <div className="card col-md-5 mx-3">                
-                  <h4 className="card-header">Standard Fire Load (186 kW/sqm):</h4>
+                  <h4 className="card-header">Standard Fire Load (168 kW/sqm):</h4>
                   <div className="card-body">
                     <h5>Maximum Unprotected Area: {this.state.standard_unprotected_area}%</h5>
                   </div>
