@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "03652d7ef222580ca62599033f1a4f23",
+    "revision": "429ccd84137c4f5110ecf9ce713591cb",
     "url": "/fse-dashboard/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fse-dashboard/static/css/2.47e06e2e.chunk.css"
   },
   {
-    "revision": "7342d9e6fdb2793ff57e",
+    "revision": "ffa3ece1d1e352e6509d",
     "url": "/fse-dashboard/static/css/main.84c95b46.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fse-dashboard/static/js/2.910ad258.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7342d9e6fdb2793ff57e",
-    "url": "/fse-dashboard/static/js/main.15d46a23.chunk.js"
+    "revision": "ffa3ece1d1e352e6509d",
+    "url": "/fse-dashboard/static/js/main.7a9b68a2.chunk.js"
   },
   {
     "revision": "646fbdaecf4bb436c4bc",
