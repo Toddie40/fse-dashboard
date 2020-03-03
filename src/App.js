@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 import BR187 from './components/br187.component.js'

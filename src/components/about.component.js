@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Module from './module.component';
 
-export default class About extends Component{
+export default class About extends Module{
 
     constructor(props){
         super(props);
@@ -9,21 +10,15 @@ export default class About extends Component{
     toString(){
         return this.name;
     }
-    render(){
+    renderBody(){
         return (
             <div className="container">
-                <div className="card">
-                    <h2 className="card-header">{this.name}</h2>
-                    <div className="card-body">
-                        <h5>Fire Safety Engineering Dashboard by OFR</h5>
-                        <p>A collection of fire safety engineering tools for routine calculations to help with speeding up the process of writing fire strategies</p>
-                    </div>        
-                    <div className="card-footer">Alex Todd | OFR Consultants</div>
-                </div>
-
-            </div>
-            
-
+                <h5>Fire Safety Engineering Dashboard by OFR</h5>
+                <p>A collection of fire safety engineering tools for routine calculations to help with speeding up the process of writing fire strategies</p>  
+            </div>        
         )
+    }
+    renderFooter(){
+        return ("Alex Todd | OFR Consultants")
     }
 }
