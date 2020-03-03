@@ -27,9 +27,9 @@ export default class BR187 extends Component{
       return {
         title: "Example Analysis",
         type: "parallel",
-        width: 6,
-        height: 3,
-        separation: 2,
+        width: '',
+        height: '',
+        separation: '',
         sprinklered: false,
         results: false
       }
@@ -136,6 +136,7 @@ export default class BR187 extends Component{
               <div className="card-body">
               <h3>Inputs</h3>
               <form onSubmit={this.onSubmit.bind(this)} autoComplete="off">
+              
               <div className="form-row">
                 <label className="col-md-4">Project Name</label>
                 <input 
@@ -146,23 +147,19 @@ export default class BR187 extends Component{
                 />
               </div>
   
+              <div className="form-row py-2">
+                <label>Radiator Geometry</label>
+              </div>
               <div className="form-row">
-                <div className="form-row col-md-4">
-                  <label>Radiator Geometry</label>
-                </div>
-                <div className="form-row col-md-4">
-                  <label>Width</label>
-                  <input className="form-control" type="number" value={this.state.width} onChange={this.onChangeWidth}></input>
-                </div>
-                <div className="form-row col-md-4">
-                  <label>Height</label>
-                  <input className="form-control" type="number" value={this.state.height} onChange={this.onChangeHeight}></input>
-                </div>
+                <input className="form-control col-md-6" type="number" value={this.state.width} onChange={this.onChangeWidth} placeholder="Width"></input>
+                
+                <input className="form-control col-md-6" type="number" value={this.state.height} onChange={this.onChangeHeight} placeholder="Height"></input>
+                
               </div>
   
               <div className="form-row">
                 <label className="col-md-4">Separation Distance<small><br/>(Usually twice the boundary distance)</small></label>
-                <input className="form-control" type="number" value={this.state.separation} onChange={this.onChangeSeparation}></input>
+                <input className="form-control" type="number" placeholder="Separation"value={this.state.separation} onChange={this.onChangeSeparation}></input>
               </div>
               
               <div className="form-group">
