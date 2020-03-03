@@ -11,6 +11,7 @@ export default class FileNameConvention extends Component{
         this.onChangeTitle = this.onChangeTitle.bind(this);
         this.onChangeType = this.onChangeType.bind(this);
         this.onChangeSecurityStatus = this.onChangeSecurityStatus.bind(this);
+        this.copyToClipboard = this.copyToClipboard.bind(this);
         this.name = 'File Naming Convention'
         this.dateObject = new Date();
         this.state = this.resetState();
@@ -28,9 +29,11 @@ export default class FileNameConvention extends Component{
         }
     }
 
-    onSubmit(){
-        return false;
-    }
+    async onSubmit(e) {
+        e.preventDefault();
+        this.copyToClipboard();
+        return false
+      }
 
     onChangeDate(e){
         this.setState({
@@ -75,9 +78,14 @@ export default class FileNameConvention extends Component{
         for (var state_key in this.state){
             filename.push(this.state[state_key]);
         }
-        return filename.join('-');
+        filename = filename.join('-');
+        return filename;
     }
 
+    copyToClipboard(){
+        var copyText = this.createFilename();
+        navigator.clipboard.writeText(copyText).then(()=>alert("Copied: " + copyText));
+    }
 
     render(){
         return(
@@ -170,7 +178,12 @@ export default class FileNameConvention extends Component{
                         <hr/>
                         <div className="form-row">
                             <label className="col-md-2">Filename:</label>
-                            <label className="form-control">{this.createFilename()}</label>
+                            <div className="input-group col-md-10">
+                            <label className="input-group form-control" id="filename">{this.createFilename()}</label>
+                            <div class="input-group-append">
+                                <input class="btn btn-primary" type="submit" value="Copy"/>
+                            </div>
+                            </div>
                         </div>
                     </form>
                 </div>
