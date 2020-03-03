@@ -14,7 +14,7 @@ class App extends Component{
     this.onPressModule = this.onPressModule.bind(this);
     this.modules = {}
     this.createModules()
-    const homepage = this.modules.filenaming;
+    const homepage = this.modules.home;
     this.state = this.resetState(homepage); 
   };
   
