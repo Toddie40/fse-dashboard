@@ -5,6 +5,7 @@ import './App.scss';
 import BR187 from './components/br187.component.js'
 import Home from './components/home.component.js'
 import About from './components/about.component.js'
+import MergingFlow from './components/mergingflow.component'
 import FileNameConvention from './components/filename.component';
 
 class App extends Component{
@@ -15,7 +16,7 @@ class App extends Component{
     this.modules = {}
     this.createModules()
     const homepage = this.modules.home;
-    this.state = this.resetState(homepage); 
+    this.state = this.resetState(homepage[0]); 
   };
   
   resetState(startingModule){
@@ -35,30 +36,32 @@ class App extends Component{
     return mods;
   }
 
+  //each modules is an array consisting of a class and a name (string)
   createModules(){
     this.modules= {
-      home: Home,
-      filenaming: FileNameConvention,
-      br187: BR187,
-      about: About
+      home: [Home, "Home"],
+      filenaming: [FileNameConvention, "File Naming Convention"],
+      br187: [BR187, "BR187 Calculator"],
+      mergingflow: [MergingFlow, "Merging Flow Calculator"],
+      about: [About, "About"]
     }
   }
 
   onPressModule(e){
     if (this.state.currentModule.name !== e.target.id) {
-      this.setModule(this.modules[e.target.id]);
+      this.setModule(this.modules[e.target.id][0]);
     }
   }
 
   createModulesList(){
     const moduleListItems = [];
     for (var module_id in this.modules){
+      var module_string = this.modules[module_id][1]
       moduleListItems.push(<button className="list-group-item list-group-item-action"
-            href={module_id}
             id={module_id}
             onClick={this.onPressModule}
             active="false"
-    >{module_id}</button>)
+    >{module_string}</button>)
     }
     console.log(moduleListItems);
     return moduleListItems;
