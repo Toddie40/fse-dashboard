@@ -205,7 +205,7 @@ export default class BR187 extends Component{
                    <label className="form-check-label" for="sprinklered">Sprinklered </label>
                 </div>
               </div>
-              <div className="form-group">
+              <div className="form-group py-3">
                 <input
                   type="submit"
                   value="calculate"
@@ -220,20 +220,26 @@ export default class BR187 extends Component{
                 <h5>{this.state.title}</h5>
                 <h5>View Factor: {this.state.viewfactor}</h5>
                 <div className="row mx-auto">
-                <div className="card col-md-5 mx-3">                
-                  <h4 className="card-header">Standard Fire Load (168 kW/sqm):</h4>
-                  <div className="card-body">
-                    <h5>Maximum Unprotected Area: {this.state.standard_unprotected_area}%</h5>
+                  <div className="col-md-6 mx-auto">
+                    <div className="card">                
+                      <div className="card-header">
+                        <h4>Standard Fire Load</h4> <sm>(168 kW/sqm)</sm>
+                      </div>
+                      <div className="card-body">
+                        <h5>Maximum Unprotected Area: {this.state.standard_unprotected_area}%</h5>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="card col-md-5 mx-3">
-                  <div className="card-header">
-                    <h4>Reduced Fire Load (84 kW/sqm):</h4>
+                  <div className="col-md-6 mx-auto">
+                    <div className="card">
+                      <div className="card-header">
+                        <h4>Reduced Fire Load</h4> <sm>(84 kW/sqm)</sm>
+                      </div>
+                      <div className="card-body">
+                        <h5>Maximum Unprotected Area: {this.state.reduced_unprotected_area}%</h5>
+                      </div>
+                    </div>
                   </div>
-                  <div className="card-body">
-                    <h5>Maximum Unprotected Area: {this.state.reduced_unprotected_area}%</h5>
-                  </div>
-                </div>
                 </div>
               </div>
               }
