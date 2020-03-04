@@ -6,6 +6,7 @@ import Home from './components/home.component.js'
 import About from './components/about.component.js'
 import MergingFlow from './components/mergingflow.component'
 import FileNameConvention from './components/filename.component';
+import Features from './components/features.component';
 
 class App extends Component{
   constructor(props){
@@ -43,6 +44,7 @@ class App extends Component{
       filenaming: [FileNameConvention, "File Naming Convention"],
       br187: [BR187, "BR187 Calculator"],
       mergingflow: [MergingFlow, "Merging Flow Calculator"],
+      features: [Features, "Features"],
       about: [About, "About"]
     }
   }
