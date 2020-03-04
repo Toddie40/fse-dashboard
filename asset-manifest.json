@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/fse-dashboard/static/css/main.d0fa6ed3.chunk.css",
-    "main.js": "/fse-dashboard/static/js/main.fca38eb8.chunk.js",
-    "main.js.map": "/fse-dashboard/static/js/main.fca38eb8.chunk.js.map",
+    "main.css": "/fse-dashboard/static/css/main.22345c69.chunk.css",
+    "main.js": "/fse-dashboard/static/js/main.6880d12c.chunk.js",
+    "main.js.map": "/fse-dashboard/static/js/main.6880d12c.chunk.js.map",
     "runtime-main.js": "/fse-dashboard/static/js/runtime-main.04c2cc85.js",
     "runtime-main.js.map": "/fse-dashboard/static/js/runtime-main.04c2cc85.js.map",
     "static/js/2.95c7c003.chunk.js": "/fse-dashboard/static/js/2.95c7c003.chunk.js",
     "static/js/2.95c7c003.chunk.js.map": "/fse-dashboard/static/js/2.95c7c003.chunk.js.map",
     "index.html": "/fse-dashboard/index.html",
-    "precache-manifest.dba6f2be5f137600cab681c868d73408.js": "/fse-dashboard/precache-manifest.dba6f2be5f137600cab681c868d73408.js",
+    "precache-manifest.505dbf82b3ee244478ed37f626a90092.js": "/fse-dashboard/precache-manifest.505dbf82b3ee244478ed37f626a90092.js",
     "service-worker.js": "/fse-dashboard/service-worker.js",
-    "static/css/main.d0fa6ed3.chunk.css.map": "/fse-dashboard/static/css/main.d0fa6ed3.chunk.css.map",
+    "static/css/main.22345c69.chunk.css.map": "/fse-dashboard/static/css/main.22345c69.chunk.css.map",
     "static/js/2.95c7c003.chunk.js.LICENSE.txt": "/fse-dashboard/static/js/2.95c7c003.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.04c2cc85.js",
     "static/js/2.95c7c003.chunk.js",
-    "static/css/main.d0fa6ed3.chunk.css",
-    "static/js/main.fca38eb8.chunk.js"
+    "static/css/main.22345c69.chunk.css",
+    "static/js/main.6880d12c.chunk.js"
   ]
 }
