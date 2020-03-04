@@ -5,7 +5,7 @@ export default class Home extends Module{
 
     constructor(props){
         super(props);
-        this.name = 'Home';
+        this.title = 'Home';
     }
     toString(){
         return this.name;

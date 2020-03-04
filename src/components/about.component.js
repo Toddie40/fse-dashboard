@@ -5,7 +5,8 @@ export default class About extends Module{
 
     constructor(props){
         super(props);
-        this.name = 'About';
+        this.title = 'About';
+        this.footer = "Alex Todd | OFR Consultants"
     }
     toString(){
         return this.name;
@@ -17,8 +18,5 @@ export default class About extends Module{
                 <p>A collection of fire safety engineering tools for routine calculations to help with speeding up the process of writing fire strategies</p>  
             </div>        
         )
-    }
-    renderFooter(){
-        return ("Alex Todd | OFR Consultants")
     }
 }
