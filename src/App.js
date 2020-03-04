@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 import BR187 from './components/br187.component.js'
 import Home from './components/home.component.js'
@@ -60,7 +59,7 @@ class App extends Component{
       moduleListItems.push(<button className="list-group-item list-group-item-action"
             id={module_id}
             onClick={this.onPressModule}
-            active="false"
+            active="true"
     >{module_string}</button>)
     }
     console.log(moduleListItems);
