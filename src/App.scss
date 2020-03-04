@@ -42,3 +42,8 @@ $theme-colors: (
 .btn:focus {
   background-color: map-get($theme-colors, "tertiary");
 }
+
+.list-group-item.active {
+  background-color: map-get($theme-colors, "primary");
+  border: 0px
+}

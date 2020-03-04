@@ -12,6 +12,7 @@ class App extends Component{
     super(props);
     this.state = this.resetState();
     this.onPressModule = this.onPressModule.bind(this);
+    this.isActiveModule = this.isActiveModule.bind(this);
     this.modules = {}
     this.createModules()
     const homepage = this.modules.home;
@@ -47,19 +48,20 @@ class App extends Component{
   }
 
   onPressModule(e){
-    if (this.state.currentModule.name !== e.target.id) {
-      this.setModule(this.modules[e.target.id][0]);
-    }
+    this.setModule(this.modules[e.target.id][0])
+  }
+
+  isActiveModule(module_id){
+    return this.modules[module_id][0] === this.state.currentModule;
   }
 
   createModulesList(){
     const moduleListItems = [];
     for (var module_id in this.modules){
       var module_string = this.modules[module_id][1]
-      moduleListItems.push(<button className="list-group-item list-group-item-action"
+      moduleListItems.push(<button className={"list-group-item list-group-item-action" + (this.isActiveModule(module_id) ? " active": "")}
             id={module_id}
             onClick={this.onPressModule}
-            active="true"
     >{module_string}</button>)
     }
     console.log(moduleListItems);
