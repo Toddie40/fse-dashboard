@@ -68,7 +68,7 @@ export default class BR187 extends Component{
   
     onChangeSprinklered(e) {
       this.setState({
-        sprinklered: e.target.value
+        sprinklered: e.target.checked
       })
     }
   
@@ -114,8 +114,8 @@ export default class BR187 extends Component{
       let r_unproected_area = 12.6 / (84 * viewfac) * 100
   
       if (this.state.sprinklered) {
-        s_unprotected_area *= 0.5;
-        r_unproected_area *= 0.5;
+        s_unprotected_area *= 2;
+        r_unproected_area *= 2;
       }
       this.setState({
         results: true,
@@ -204,7 +204,7 @@ export default class BR187 extends Component{
                 <div className="form-check">                  
                    <input className="form-check-input"
                    type="checkbox"
-                   value="sprinklered"
+                   checked={this.state.sprinklered}
                    id="sprinklered"
                    onChange={this.onChangeSprinklered}/>
                    <label className="form-check-label" for="sprinklered">Sprinklered </label>
