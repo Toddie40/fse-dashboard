@@ -170,30 +170,33 @@ export default class BR187 extends Component{
                   className="form-check-input" 
                   type="radio" 
                   value="parallel"
+                  id="parallel"
                   checked={this.state.type === "parallel"}
                   onChange={this.handleTypeChange}
                 />
-                <label className="form-check-label" for="Parallel">Parallel</label>
+                <label className="form-check-label" for="parallel">Parallel</label>
                 </div>
                 <div className="form-check col-md-4">
                 <input 
                   className="form-check-input"
                   type="radio"
                   value="perpendicular"
+                  id="perpendicular"
                   checked={this.state.type === "perpendicular"}
                   onChange={this.handleTypeChange}
                 />
-                <label className="form-check-label" for="Perpendicular">Perpendicular</label>
+                <label className="form-check-label" for="perpendicular">Perpendicular</label>
                 </div>
                 <div className="form-check">
                 <input 
                   className="form-check-input" 
                   type="radio" 
                   value="corner"
+                  id="corner"
                   checked={this.state.type === "corner"}
                   onChange={this.handleTypeChange}
                 />
-                <label className="form-check-label" for="Corner">Corner</label>
+                <label className="form-check-label" for="corner">Corner</label>
                 </div>
               </div>
   
@@ -202,6 +205,7 @@ export default class BR187 extends Component{
                    <input className="form-check-input"
                    type="checkbox"
                    value="sprinklered"
+                   id="sprinklered"
                    onChange={this.onChangeSprinklered}/>
                    <label className="form-check-label" for="sprinklered">Sprinklered </label>
                 </div>
