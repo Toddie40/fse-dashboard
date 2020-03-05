@@ -63,7 +63,7 @@ class App extends Component{
     const moduleListItems = [];
     for (var module_id in this.modules){
       var module_string = this.modules[module_id][1]
-      moduleListItems.push(<a className={"list-group-item list-group-item-action" + (this.isActiveModule(module_id) ? " active": "")}
+      moduleListItems.push(<a className={"list-group-item list-group-item-action rounded-0 module" + (this.isActiveModule(module_id) ? " active": "")}
             id={module_id}
             onClick={this.onPressModule}
             href={"#"+module_string}
@@ -79,7 +79,7 @@ class App extends Component{
       <div className="container">
         <div className="row my-5">
           <div className="navpane px-0 fixed-top col-sm-2">
-            <div className="list-group-flush modules">
+            <div className="list-group modules">
               {sfe_modules}
             </div>
           </div>

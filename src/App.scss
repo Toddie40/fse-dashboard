@@ -21,7 +21,7 @@ $theme-colors: (
 );
 
 .navpane {
-  background-color: white;
+  background-color: #ffffff;
   height: 100%;
   //remove white full-height pane if we're portrait
   @media (max-width: 575.98px) { 
@@ -69,8 +69,10 @@ body {
 }
 .list-group-item.active {
   background-color: map-get($theme-colors , "gray" );
-  border: map-get($theme-colors , "gray" );
+  border: 0px;
+  border-left: 0.4rem solid map-get($theme-colors , "primary" );
   font-weight: bold;
+  z-index: 1100;
 }
 
 
