@@ -25,7 +25,7 @@ export default class BR187 extends Component{
   
     resetState(){
       return {
-        title: "Example Analysis",
+        title: '',
         type: "parallel",
         width: '',
         height: '',
@@ -137,11 +137,12 @@ export default class BR187 extends Component{
               <h3>Inputs</h3>
               <form onSubmit={this.onSubmit.bind(this)} autoComplete="off">
               
-              <div className="form-row">
+              <div className="form-row py-2">
                 <label className="col-md-4">Project Name</label>
                 <input 
                   className="form-control"
                   type="text"
+                  placeholder="Project Title"
                   value={this.state.title}
                   onChange={this.onChangeTitle}
                 />
@@ -157,7 +158,7 @@ export default class BR187 extends Component{
                 
               </div>
   
-              <div className="form-row">
+              <div className="form-row py-2">
                 <label className="col-md-4">Separation Distance<small><br/>(Usually twice the boundary distance)</small></label>
                 <input className="form-control" type="number" step="0.001" placeholder="Separation"value={this.state.separation} onChange={this.onChangeSeparation}></input>
               </div>
@@ -196,7 +197,7 @@ export default class BR187 extends Component{
                 </div>
               </div>
   
-              <div className="form-row">
+              <div className="form-row py-2">
                 <div className="form-check">                  
                    <input className="form-check-input"
                    type="checkbox"
