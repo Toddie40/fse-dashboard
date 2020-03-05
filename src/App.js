@@ -66,7 +66,7 @@ class App extends Component{
       moduleListItems.push(<a className={"list-group-item list-group-item-action" + (this.isActiveModule(module_id) ? " active": "")}
             id={module_id}
             onClick={this.onPressModule}
-            href="#"
+            href={"#"+module_string}
     >{module_string}</a>)
     }
     console.log(moduleListItems);
