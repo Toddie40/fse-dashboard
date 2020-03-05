@@ -18,7 +18,7 @@ export default class Module extends Component {
     render(){
         return (
             <div className="container">
-                <div className="card"> 
+                <div className="card shadow"> 
                     <div className="card-header">
                         <h1>{this.title}</h1>
                     </div>

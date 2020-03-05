@@ -61,10 +61,11 @@ class App extends Component{
     const moduleListItems = [];
     for (var module_id in this.modules){
       var module_string = this.modules[module_id][1]
-      moduleListItems.push(<button className={"list-group-item list-group-item-action" + (this.isActiveModule(module_id) ? " active": "")}
+      moduleListItems.push(<a className={"list-group-item list-group-item-action" + (this.isActiveModule(module_id) ? " active": "")}
             id={module_id}
             onClick={this.onPressModule}
-    >{module_string}</button>)
+            href="#"
+    >{module_string}</a>)
     }
     console.log(moduleListItems);
     return moduleListItems;
@@ -73,12 +74,16 @@ class App extends Component{
   render() {
     let sfe_modules = this.createModulesList();
     return (
-      <div className="container">
+      <div className="container-fluid">
         <div className="row my-5">
-          <div className="list-group modules col-md-2">
+          <div className="navpane vh-100 px-0 fixed-top col-md-2">
+          <div className="list-group-flush modules">
             {sfe_modules}
           </div>
-          <div className="col-md-10">
+          </div>
+          <div className="spacer col-md-2">
+          </div>
+          <div className="module-container col-md-10">
             <div className="container">
               
               <this.state.currentModule/>

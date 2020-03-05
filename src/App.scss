@@ -19,9 +19,18 @@ $theme-colors: (
   "black": #343a40
 );
 
+.navpane {
+  background-color: white;
+}
+
+body {
+  background-color: map-get($theme-colors, "tertiary");
+}
 .card {
   background-color: map-get($theme-colors, "white");
   color: map-get($theme-colors, "dark");
+  border: 2px solid map-get($theme-colors, "white");
+  
 }
 .card-header {
   background-color: map-get($theme-colors , "primary");
@@ -43,7 +52,24 @@ $theme-colors: (
   background-color: map-get($theme-colors, "tertiary");
 }
 
+.container-fluid {
+  background-color: map-get($theme-colors , "tertiary" );
+}
 .list-group-item.active {
-  background-color: map-get($theme-colors, "primary");
-  border: 0px
+  background-color: map-get($theme-colors , "tertiary" );
+  border: map-get($theme-colors , "tertiary" );
+  font-weight: bold;
+}
+
+
+//hide spinners in number fields
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
 }

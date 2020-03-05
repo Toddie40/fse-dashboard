@@ -151,15 +151,15 @@ export default class BR187 extends Component{
                 <label>Radiator Geometry</label>
               </div>
               <div className="form-row">
-                <input className="form-control col-md-6" type="number" value={this.state.width} onChange={this.onChangeWidth} placeholder="Width"></input>
+                <input className="form-control col-md-6" type="number" step="0.001" value={this.state.width} onChange={this.onChangeWidth} placeholder="Width"></input>
                 
-                <input className="form-control col-md-6" type="number" value={this.state.height} onChange={this.onChangeHeight} placeholder="Height"></input>
+                <input className="form-control col-md-6" type="number" step="0.001" value={this.state.height} onChange={this.onChangeHeight} placeholder="Height"></input>
                 
               </div>
   
               <div className="form-row">
                 <label className="col-md-4">Separation Distance<small><br/>(Usually twice the boundary distance)</small></label>
-                <input className="form-control" type="number" placeholder="Separation"value={this.state.separation} onChange={this.onChangeSeparation}></input>
+                <input className="form-control" type="number" step="0.001" placeholder="Separation"value={this.state.separation} onChange={this.onChangeSeparation}></input>
               </div>
               
               <div className="form-group">
