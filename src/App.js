@@ -7,6 +7,7 @@ import About from './components/about.component.js'
 import MergingFlow from './components/mergingflow.component'
 import FileNameConvention from './components/filename.component';
 import Features from './components/features.component';
+import References from './components/references.component';
 
 class App extends Component{
   constructor(props){
@@ -45,7 +46,8 @@ class App extends Component{
       br187: [BR187, "BR187 Calculator"],
       mergingflow: [MergingFlow, "Merging Flow Calculator"],
       features: [Features, "Features"],
-      about: [About, "About"]
+      about: [About, "About"],
+      references: [References, "References"]
     }
   }
 
@@ -74,14 +76,14 @@ class App extends Component{
   render() {
     let sfe_modules = this.createModulesList();
     return (
-      <div className="container-fluid">
+      <div className="container">
         <div className="row my-5">
-          <div className="navpane vh-100 px-0 fixed-top col-md-2">
-          <div className="list-group-flush modules">
-            {sfe_modules}
+          <div className="navpane px-0 fixed-top col-sm-2">
+            <div className="list-group-flush modules">
+              {sfe_modules}
+            </div>
           </div>
-          </div>
-          <div className="spacer col-md-2">
+          <div className="spacer col-sm-2">
           </div>
           <div className="module-container col-md-10">
             <div className="container">
