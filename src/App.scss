@@ -16,15 +16,27 @@ $theme-colors: (
   "dark": #006666,
   "danger": #ff4136,
   "white": #f8f9fa,
+  "gray": #55585c,
   "black": #343a40
 );
 
 .navpane {
   background-color: white;
+  height: 100%;
+  //remove white full-height pane if we're portrait
+  @media (max-width: 575.98px) { 
+    height: 0;
+   }
+}
+.modules {
+  height: 10px;
+  @media (max-width: 575.98px) { 
+    height: 10px;
+  }
 }
 
 body {
-  background-color: map-get($theme-colors, "tertiary");
+  background-color: map-get($theme-colors, "gray");
 }
 .card {
   background-color: map-get($theme-colors, "white");
@@ -56,8 +68,8 @@ body {
   background-color: map-get($theme-colors , "tertiary" );
 }
 .list-group-item.active {
-  background-color: map-get($theme-colors , "tertiary" );
-  border: map-get($theme-colors , "tertiary" );
+  background-color: map-get($theme-colors , "gray" );
+  border: map-get($theme-colors , "gray" );
   font-weight: bold;
 }
 
