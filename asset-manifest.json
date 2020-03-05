@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/fse-dashboard/static/css/main.22345c69.chunk.css",
-    "main.js": "/fse-dashboard/static/js/main.eab25a55.chunk.js",
-    "main.js.map": "/fse-dashboard/static/js/main.eab25a55.chunk.js.map",
+    "main.css": "/fse-dashboard/static/css/main.8ea542bc.chunk.css",
+    "main.js": "/fse-dashboard/static/js/main.aa9fb702.chunk.js",
+    "main.js.map": "/fse-dashboard/static/js/main.aa9fb702.chunk.js.map",
     "runtime-main.js": "/fse-dashboard/static/js/runtime-main.04c2cc85.js",
     "runtime-main.js.map": "/fse-dashboard/static/js/runtime-main.04c2cc85.js.map",
     "static/js/2.95c7c003.chunk.js": "/fse-dashboard/static/js/2.95c7c003.chunk.js",
     "static/js/2.95c7c003.chunk.js.map": "/fse-dashboard/static/js/2.95c7c003.chunk.js.map",
     "index.html": "/fse-dashboard/index.html",
-    "precache-manifest.275d126b82503f09f0bd4b28c1a4589b.js": "/fse-dashboard/precache-manifest.275d126b82503f09f0bd4b28c1a4589b.js",
+    "precache-manifest.8f0a777347ad1bf49aeaedbb9b4cdc4f.js": "/fse-dashboard/precache-manifest.8f0a777347ad1bf49aeaedbb9b4cdc4f.js",
     "service-worker.js": "/fse-dashboard/service-worker.js",
-    "static/css/main.22345c69.chunk.css.map": "/fse-dashboard/static/css/main.22345c69.chunk.css.map",
+    "static/css/main.8ea542bc.chunk.css.map": "/fse-dashboard/static/css/main.8ea542bc.chunk.css.map",
     "static/js/2.95c7c003.chunk.js.LICENSE.txt": "/fse-dashboard/static/js/2.95c7c003.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.04c2cc85.js",
     "static/js/2.95c7c003.chunk.js",
-    "static/css/main.22345c69.chunk.css",
-    "static/js/main.eab25a55.chunk.js"
+    "static/css/main.8ea542bc.chunk.css",
+    "static/js/main.aa9fb702.chunk.js"
   ]
 }
