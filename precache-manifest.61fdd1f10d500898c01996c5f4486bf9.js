@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "23d7a7b0f7eda8a5fb1d01d5fdbe6b60",
+    "revision": "486d2b9a1f4d3a8a8a565484db66ff25",
     "url": "/fse-dashboard/index.html"
   },
   {
-    "revision": "a6cb621dec3d7ac2dc92",
+    "revision": "7120c5181f6e0259795c",
     "url": "/fse-dashboard/static/css/main.c1e32603.chunk.css"
   },
   {
-    "revision": "3f7dc2d4cd91a49d29c1",
-    "url": "/fse-dashboard/static/js/2.f5a17b5d.chunk.js"
+    "revision": "b53613b3d08912105f96",
+    "url": "/fse-dashboard/static/js/2.585f007c.chunk.js"
   },
   {
     "revision": "df8be702f0cc9d299c0ff42ca03d3e40",
-    "url": "/fse-dashboard/static/js/2.f5a17b5d.chunk.js.LICENSE.txt"
+    "url": "/fse-dashboard/static/js/2.585f007c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a6cb621dec3d7ac2dc92",
-    "url": "/fse-dashboard/static/js/main.d35810d3.chunk.js"
+    "revision": "7120c5181f6e0259795c",
+    "url": "/fse-dashboard/static/js/main.4d5a4bd1.chunk.js"
   },
   {
     "revision": "646fbdaecf4bb436c4bc",
