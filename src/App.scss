@@ -20,23 +20,14 @@ $theme-colors: (
   "black": #343a40
 );
 
-.navpane {
-  background-color: #ffffff;
-  height: 100%;
-  //remove white full-height pane if we're portrait
-  @media (max-width: 575.98px) { 
-    height: 0;
-   }
-}
-.modules {
-  height: 10px;
-  @media (max-width: 575.98px) { 
-    height: 10px;
-  }
-}
 
 body {
   background-color: map-get($theme-colors, "gray");
+}
+
+.navbar {
+  background-color: map-get($theme-colors, "primary");
+  width: 100%;
 }
 .card {
   background-color: map-get($theme-colors, "white");
@@ -51,6 +42,7 @@ body {
 }
 
 .btn {
+  color: map-get($theme-colors , "white" );
   background-color: map-get($theme-colors, "primary");
   border: map-get($theme-colors, "secondary");
   font-family: Raleway;
@@ -66,13 +58,6 @@ body {
 
 .container-fluid {
   background-color: map-get($theme-colors , "tertiary" );
-}
-.list-group-item.active {
-  background-color: map-get($theme-colors , "gray" );
-  border: 0px;
-  border-left: 0.4rem solid map-get($theme-colors , "primary" );
-  font-weight: bold;
-  z-index: 1100;
 }
 
 

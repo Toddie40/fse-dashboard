@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-//import logo from './logo.svg';
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
+import {Nav, Navbar, NavDropdown, Form, FormControl, Button} from 'react-bootstrap'
+
+import logo from './logo-light.png';
 import './App.scss';
 import BR187 from './components/br187.component.js'
 import Home from './components/home.component.js'
@@ -12,87 +15,88 @@ import References from './components/references.component';
 class App extends Component{
   constructor(props){
     super(props);
-    this.state = this.resetState();
-    this.onPressModule = this.onPressModule.bind(this);
-    this.isActiveModule = this.isActiveModule.bind(this);
     this.modules = {}
-    this.createModules()
-    const homepage = this.modules.home;
-    this.state = this.resetState(homepage[0]); 
+    this.setModules()
   };
-  
-  resetState(startingModule){
-    return {
-      currentModule: startingModule
-    }
-  }
-
-  setModule(fse_module){
-    this.setState({
-      currentModule: fse_module
-    });
-  }
-
-  getModules(){
-    const mods = this.modules
-    return mods;
-  }
 
   //each modules is an array consisting of a class and a name (string)
-  createModules(){
+  setModules(){
     this.modules= {
       home: [Home, "Home"],
-      filenaming: [FileNameConvention, "File Naming Convention"],
-      br187: [BR187, "BR187 Calculator"],
-      mergingflow: [MergingFlow, "Merging Flow Calculator"],
+      filenaming: [FileNameConvention, "File Naming"],
+      br187: [BR187, "BR187"],
+      mergingflow: [MergingFlow, "Merging Flow"],
       features: [Features, "Features"],
       about: [About, "About"],
       references: [References, "References"]
     }
   }
 
-  onPressModule(e){
-    this.setModule(this.modules[e.target.id][0])
-  }
-
-  isActiveModule(module_id){
-    return this.modules[module_id][0] === this.state.currentModule;
-  }
-
   createModulesList(){
     const moduleListItems = [];
     for (var module_id in this.modules){
       var module_string = this.modules[module_id][1]
-      moduleListItems.push(<a className={"list-group-item list-group-item-action rounded-0 module" + (this.isActiveModule(module_id) ? " active": "")}
+      moduleListItems.push(<Link className={"list-group-item list-group-item-action rounded-0 module"}
             id={module_id}
-            onClick={this.onPressModule}
-            href={"#"+module_string}
-    >{module_string}</a>)
+            to={"/"+module_string}
+    >{module_string}</Link>)
     }
     console.log(moduleListItems);
     return moduleListItems;
   }
 
-  render() {
-    let sfe_modules = this.createModulesList();
+  navbar(){
     return (
-      <div className="container">
-        <div className="row my-5">
-          <div className="navpane px-0 fixed-top col-sm-2">
-            <div className="list-group modules">
-              {sfe_modules}
+    <Navbar variant="dark" className="navbar" expand="md">
+      <Navbar.Brand href="/Home">
+        <img
+          src={logo}
+          height="40rem"
+        />
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mr-auto">
+          <Nav.Link as={Link} to="/Home">Home</Nav.Link>
+          <Nav.Link as={Link} to="/Features">Features</Nav.Link>
+          <NavDropdown title="Modules" id="basic-nav-dropdown">
+            <NavDropdown.Header>Implemented</NavDropdown.Header>
+            <NavDropdown.Item as={Link} to="/File Naming">File Naming</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/BR187">BR187</NavDropdown.Item>
+            <NavDropdown.Divider/>
+            <NavDropdown.Header>Coming Soon</NavDropdown.Header>
+            <NavDropdown.Item as={Link} to="/Merging Flow">Merging Flow</NavDropdown.Item>
+          </NavDropdown>
+        </Nav>
+        <Nav>
+          <Nav.Link as={Link} to="/About">About</Nav.Link>
+          <Nav.Link as={Link} to="/References" className="mr-sm-2">References</Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>)
+  }
+
+
+
+  render() {
+    let sfe_modules = this.createModulesList();    
+    
+    let routes = [];
+    for (let key in this.modules){
+      let item = this.modules[key];
+      routes.push(<Route path={"/"+item[1]} component={item[0]} />);
+    }
+      
+    return (
+      <div className="root">
+        <Router>
+          <div>
+            {this.navbar()}
+            <div className="container module-container mt-5 mx-auto">
+                {routes}              
             </div>
           </div>
-          <div className="spacer col-sm-2">
-          </div>
-          <div className="module-container col-md-10">
-            <div className="container">
-              
-              <this.state.currentModule/>
-              
-            </div>
-          </div>
-          </div>
+        </Router>
       </div>
   );
 };
