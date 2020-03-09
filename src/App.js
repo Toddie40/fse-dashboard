@@ -79,9 +79,8 @@ class App extends Component{
           <div>
             {this.navbar()}
             <div className="container module-container mt-5 mx-auto">
-              
-                {routes}              
-              
+                <Route exact path="/" component={Home}/>
+                {routes}                            
             </div>
           </div>
         </Router>
