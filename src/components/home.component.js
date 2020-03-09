@@ -5,7 +5,7 @@ export default class Home extends Module{
 
     constructor(props){
         super(props);
-        this.title = 'Home';
+        this.title = 'FSE Dashboard';
     }
     toString(){
         return this.name;
@@ -13,8 +13,6 @@ export default class Home extends Module{
     renderBody(){
         return (
             <div>
-                <h2>OFR Fire Safety Engineering Dashboard</h2>
-                <hr/>
                 <p>This is the place to find all of our in-house calculation tools.</p>
                 <p>It's all ported over from FSETOOLS</p>
                 <hr/>
