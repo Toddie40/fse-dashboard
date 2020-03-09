@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 import Module from './module.component';
 
 export default class Features extends Module{
@@ -6,10 +7,12 @@ export default class Features extends Module{
         super(props);
         this.title="Features"
         this.footer="I'm trying my best y'all but it takes time!"
+        //Features are stored in two arrays. one for implemented features and one for non-implemented features that you wish to implement.
+        //Each feature is an array. The first entry corresponds to the user-friendly name of the feature. The second entry refers to the url linking to that feature.
         this.features = {
             implemented: [
-                "BR187",
-                "File naming Convention",
+                ["BR187", "/BR187"],
+                ["File naming Convention", "/File Naming"]
             ],
             intended: [
                 "Merging Flow",
@@ -23,11 +26,11 @@ export default class Features extends Module{
     renderBody() {
         var currentFeatures = [];
         this.features.implemented.forEach(
-            function(item, index) {currentFeatures.push(<div className="lists-group-item">{item}</div>)}
+            function(item, index) {currentFeatures.push(<a className="list-group-item list-group-item-action" href={"#" + item[1]}>{item[0]}</a>)}
         );
         var intendedFeatures = [];
         this.features.intended.forEach(
-            function(item, index) {intendedFeatures.push(<div className="lists-group-item">{item}</div>)}
+            function(item, index) {intendedFeatures.push(<div className="list-group-item">{item}</div>)}
         );
         return (
             <div>
