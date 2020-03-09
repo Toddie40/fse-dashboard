@@ -32,45 +32,33 @@ class App extends Component{
     }
   }
 
-  createModulesList(){
-    const moduleListItems = [];
-    for (var module_id in this.modules){
-      var module_string = this.modules[module_id][1]
-      moduleListItems.push(<Link className={"list-group-item list-group-item-action rounded-0 module"}
-            id={module_id}
-            to={"/"+module_string}
-    >{module_string}</Link>)
-    }
-    console.log(moduleListItems);
-    return moduleListItems;
-  }
-
   navbar(){
     return (
     <Navbar variant="dark" className="navbar" expand="md">
-      <Navbar.Brand as={Link} to="./Home">
+      <Navbar.Brand as={Link} to="Home">
         <img
           src={logo}
           height="40rem"
+          alt="OFR Consultants"
         />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link as={Link} to="./Home">Home</Nav.Link>
-          <Nav.Link as={Link} to="./Features">Features</Nav.Link>
+          <Nav.Link as={Link} to="Home">Home</Nav.Link>
+          <Nav.Link as={Link} to="Features">Features</Nav.Link>
           <NavDropdown title="Modules" id="basic-nav-dropdown">
             <NavDropdown.Header>Implemented</NavDropdown.Header>
-            <NavDropdown.Item as={Link} to="./File Naming">File Naming</NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="./BR187">BR187</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="File Naming">File Naming</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="BR187">BR187</NavDropdown.Item>
             <NavDropdown.Divider/>
             <NavDropdown.Header>Coming Soon</NavDropdown.Header>
-            <NavDropdown.Item as={Link} to="./Merging Flow">Merging Flow</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="Merging Flow">Merging Flow</NavDropdown.Item>
           </NavDropdown>
         </Nav>
         <Nav>
-          <Nav.Link as={Link} to="./About">About</Nav.Link>
-          <Nav.Link as={Link} to="./References" className="mr-sm-2">References</Nav.Link>
+          <Nav.Link as={Link} to="About">About</Nav.Link>
+          <Nav.Link as={Link} to="References" className="mr-sm-2">References</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>)
@@ -79,8 +67,6 @@ class App extends Component{
 
 
   render() {
-    let sfe_modules = this.createModulesList();    
-    
     let routes = [];
     for (let key in this.modules){
       let item = this.modules[key];
@@ -93,7 +79,9 @@ class App extends Component{
           <div>
             {this.navbar()}
             <div className="container module-container mt-5 mx-auto">
+              
                 {routes}              
+              
             </div>
           </div>
         </Router>
