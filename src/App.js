@@ -48,7 +48,7 @@ class App extends Component{
   navbar(){
     return (
     <Navbar variant="dark" className="navbar" expand="md">
-      <Navbar.Brand href="/Home">
+      <Navbar.Brand as={Link} to="./Home">
         <img
           src={logo}
           height="40rem"
@@ -57,20 +57,20 @@ class App extends Component{
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link as={Link} to="/Home">Home</Nav.Link>
-          <Nav.Link as={Link} to="/Features">Features</Nav.Link>
+          <Nav.Link as={Link} to="./Home">Home</Nav.Link>
+          <Nav.Link as={Link} to="./Features">Features</Nav.Link>
           <NavDropdown title="Modules" id="basic-nav-dropdown">
             <NavDropdown.Header>Implemented</NavDropdown.Header>
-            <NavDropdown.Item as={Link} to="/File Naming">File Naming</NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/BR187">BR187</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="./File Naming">File Naming</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="./BR187">BR187</NavDropdown.Item>
             <NavDropdown.Divider/>
             <NavDropdown.Header>Coming Soon</NavDropdown.Header>
-            <NavDropdown.Item as={Link} to="/Merging Flow">Merging Flow</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="./Merging Flow">Merging Flow</NavDropdown.Item>
           </NavDropdown>
         </Nav>
         <Nav>
-          <Nav.Link as={Link} to="/About">About</Nav.Link>
-          <Nav.Link as={Link} to="/References" className="mr-sm-2">References</Nav.Link>
+          <Nav.Link as={Link} to="./About">About</Nav.Link>
+          <Nav.Link as={Link} to="./References" className="mr-sm-2">References</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>)
