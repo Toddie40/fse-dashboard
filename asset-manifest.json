@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/fse-dashboard/static/css/main.09616c77.chunk.css",
-    "main.js": "/fse-dashboard/static/js/main.8860b56e.chunk.js",
-    "main.js.map": "/fse-dashboard/static/js/main.8860b56e.chunk.js.map",
+    "main.js": "/fse-dashboard/static/js/main.ac6c70d8.chunk.js",
+    "main.js.map": "/fse-dashboard/static/js/main.ac6c70d8.chunk.js.map",
     "runtime-main.js": "/fse-dashboard/static/js/runtime-main.04c2cc85.js",
     "runtime-main.js.map": "/fse-dashboard/static/js/runtime-main.04c2cc85.js.map",
     "static/js/2.097eef4d.chunk.js": "/fse-dashboard/static/js/2.097eef4d.chunk.js",
     "static/js/2.097eef4d.chunk.js.map": "/fse-dashboard/static/js/2.097eef4d.chunk.js.map",
     "index.html": "/fse-dashboard/index.html",
-    "precache-manifest.68528e7092a1694eaa9a3aeedffcaa38.js": "/fse-dashboard/precache-manifest.68528e7092a1694eaa9a3aeedffcaa38.js",
+    "precache-manifest.3af1d6105011681712a8a1824ae9da99.js": "/fse-dashboard/precache-manifest.3af1d6105011681712a8a1824ae9da99.js",
     "service-worker.js": "/fse-dashboard/service-worker.js",
     "static/css/main.09616c77.chunk.css.map": "/fse-dashboard/static/css/main.09616c77.chunk.css.map",
     "static/js/2.097eef4d.chunk.js.LICENSE.txt": "/fse-dashboard/static/js/2.097eef4d.chunk.js.LICENSE.txt",
@@ -16,12 +16,12 @@
     "static/media/MergingFlow_2.png": "/fse-dashboard/static/media/MergingFlow_2.686ef300.png",
     "static/media/MergingFlow_3.png": "/fse-dashboard/static/media/MergingFlow_3.d5891c9b.png",
     "static/media/logo-light.png": "/fse-dashboard/static/media/logo-light.bbbae4b4.png",
-    "static/media/logo.svg": "/fse-dashboard/static/media/logo.ee7cd8ed.svg"
+    "static/media/logo.png": "/fse-dashboard/static/media/logo.1cd923bd.png"
   },
   "entrypoints": [
     "static/js/runtime-main.04c2cc85.js",
     "static/js/2.097eef4d.chunk.js",
     "static/css/main.09616c77.chunk.css",
-    "static/js/main.8860b56e.chunk.js"
+    "static/js/main.ac6c70d8.chunk.js"
   ]
 }

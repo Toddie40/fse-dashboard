@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "65d0c7670de2cfec076242a611ec5493",
+    "revision": "7e40ddb0fc66a8ae17f3949331cc2595",
     "url": "/fse-dashboard/index.html"
   },
   {
-    "revision": "fc422ca82697b5f8ecc8",
+    "revision": "7930f42b3a8c653ccf2f",
     "url": "/fse-dashboard/static/css/main.09616c77.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fse-dashboard/static/js/2.097eef4d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fc422ca82697b5f8ecc8",
-    "url": "/fse-dashboard/static/js/main.8860b56e.chunk.js"
+    "revision": "7930f42b3a8c653ccf2f",
+    "url": "/fse-dashboard/static/js/main.ac6c70d8.chunk.js"
   },
   {
     "revision": "646fbdaecf4bb436c4bc",
@@ -40,7 +40,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fse-dashboard/static/media/logo-light.bbbae4b4.png"
   },
   {
-    "revision": "ee7cd8ed2dcec943251eb2763684fc6f",
-    "url": "/fse-dashboard/static/media/logo.ee7cd8ed.svg"
+    "revision": "1cd923bdeb9d40670cdbdbf7110226be",
+    "url": "/fse-dashboard/static/media/logo.1cd923bd.png"
   }
 ]);
