@@ -61,6 +61,40 @@ body {
   background-color: map-get($theme-colors , "tertiary" );
 }
 
+.module-header-logo {
+  height: 3rem;
+}
+
+
+//Medium devices
+@include media-breakpoint-down(md) {
+  .module-header-title {
+    font-size: 32px;
+  }
+}
+
+//small devices
+@include media-breakpoint-down(sm) {
+  .module-header-title {
+    font-size: 24px;
+  }
+  .module-header-logo{
+    height: 32px;
+  }
+}
+
+//For extra-small devices
+@include media-breakpoint-down(xs) {
+  .module-header-title {
+    font-size: 16px;
+  }
+  .module-header-logo{
+    height: 32px;
+  }
+}
+
+
+
 
 //hide spinners in number fields
 input::-webkit-outer-spin-button,
@@ -73,3 +107,5 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance:textfield; /* Firefox */
 }
+
+
