@@ -12,10 +12,10 @@ export default class Features extends Module{
         this.features = {
             implemented: [
                 ["BR187", "/BR187"],
-                ["File naming Convention", "/File Naming"]
+                ["File naming Convention", "/File Naming"],
+                ["Merging Flow", "/Merging Flow"]
             ],
             intended: [
-                "Merging Flow",
                 "Flame Height",
                 "Sprinkler Activation Time",
                 "Datasheets"
