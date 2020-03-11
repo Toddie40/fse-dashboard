@@ -28,7 +28,7 @@ export default class Module extends Component {
                 <div className="card shadow"> 
                     <div className="card-header">
                         <div className="d-flex">
-                            <h1 class="col-md justify-content-center">
+                            <h1 className="col-md justify-content-center">
                             {this.title}
                             </h1>
                             <div className="col-md ml-auto justify-content-right" >
