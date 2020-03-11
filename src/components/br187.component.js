@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import clip from './../utils/mathutils'
+import Module from './module.component';
 
 
-export default class BR187 extends Component{
+export default class BR187 extends Module{
   
     constructor(props){
       super(props);
@@ -13,7 +14,7 @@ export default class BR187 extends Component{
       this.handleTypeChange = this.handleTypeChange.bind(this)
       this.onChangeSprinklered = this.onChangeSprinklered.bind(this)
       this.state = this.resetState();
-      this.name = 'BR187'
+      this.title = 'BR187'
     };
     toString(){
       return this.name;
@@ -126,14 +127,10 @@ export default class BR187 extends Component{
       
     }
   
-    render() {
+    renderBody() {
       return (
         <div className="container">
-            <div className="card">
-              <div className="card-header">
-                <h1>BR187 Tool</h1>
-              </div>
-              <div className="card-body">
+            
               <h3>Inputs</h3>
               <form onSubmit={this.onSubmit.bind(this)} autoComplete="off">
               
@@ -249,8 +246,6 @@ export default class BR187 extends Component{
               </div>
               }
               </div>
-            </div>            
-        </div>
     );
   };
   };

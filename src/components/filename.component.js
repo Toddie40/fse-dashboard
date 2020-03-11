@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import ofrify from "./../utils/dateutils"
+import Module from './module.component';
 
-export default class FileNameConvention extends Component{
+export default class FileNameConvention extends Module{
     constructor(props){
         super(props);
         this.onChangeDate = this.onChangeDate.bind(this);
@@ -12,7 +13,7 @@ export default class FileNameConvention extends Component{
         this.onChangeType = this.onChangeType.bind(this);
         this.onChangeSecurityStatus = this.onChangeSecurityStatus.bind(this);
         this.copyToClipboard = this.copyToClipboard.bind(this);
-        this.name = 'File Naming Convention'
+        this.title = 'File Naming Convention'
         this.state = this.resetState();
     }
 
@@ -95,13 +96,8 @@ export default class FileNameConvention extends Component{
         navigator.clipboard.writeText(copyText).then(()=>alert("Copied: " + copyText));
     }
 
-    render(){
+    renderBody(){
         return(
-        <div className="container">
-            <div className="card">
-                <h1 className="card-header">
-                    {this.name}
-                </h1>
                 <div className="card-body">
                     <form onSubmit={this.onSubmit.bind(this)} autoComplete="off">
                         <div className="form-row">
@@ -195,8 +191,6 @@ export default class FileNameConvention extends Component{
                         </div>
                     </form>
                 </div>
-            </div>
-        </div>
         );
     }
 }
