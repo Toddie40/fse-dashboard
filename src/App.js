@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route, Link, HashRouter as Router } from 'react-router-dom'
 import {Nav, Navbar, NavDropdown, Form, FormControl, Button} from 'react-bootstrap'
 
-import logo from './logo-light.png';
+import logo from './img/logo-light.png';
 import './App.scss';
 import BR187 from './components/br187.component.js'
 import Home from './components/home.component.js'
@@ -34,7 +34,7 @@ class App extends Component{
 
   navbar(){
     return (
-    <Navbar variant="dark" className="navbar" expand="md">
+    <Navbar variant="dark" className="navbar shadow-lg" expand="md" sticky="top">
       <Navbar.Brand as={Link} to="/Home">
         <img
           src={logo}
@@ -51,9 +51,9 @@ class App extends Component{
             <NavDropdown.Header>Implemented</NavDropdown.Header>
             <NavDropdown.Item as={Link} to="/File Naming">File Naming</NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/BR187">BR187</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/Merging Flow">Merging Flow</NavDropdown.Item>
             <NavDropdown.Divider/>
             <NavDropdown.Header>Coming Soon</NavDropdown.Header>
-            <NavDropdown.Item as={Link} to="/Merging Flow">Merging Flow</NavDropdown.Item>
           </NavDropdown>
         </Nav>
         <Nav>
