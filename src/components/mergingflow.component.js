@@ -279,10 +279,16 @@ export default class MergingFlow extends Module{
                 {(this.state.N > 60 && this.state.D < 2) ? first_method : second_method}
                 </div>
                 <hr/>
-                <h3>Results</h3>
-                <label className="input-group form-control">
-                    {this.calculate()}
-                </label>
+                <div className="row justify-content-center">
+                    <Form.Group className="row">
+                        <Form.Label>Width of Final Exit (m)</Form.Label>
+                        <Form.Control
+                            as="label"
+                        >   
+                            {this.calculate()}
+                        </Form.Control>
+                    </Form.Group>
+                </div>
             </Form> 
 
         );
@@ -487,7 +493,7 @@ export default class MergingFlow extends Module{
                 </div> 
                 <div className="row justify-content-center">
                 {(Number(this.state.B) + Number(this.state.N) > 60 && this.state.D < 2) ? first_method : second_method}
-                </div>
+                </div >
                 <hr/>
                 <h3>Results</h3>
                 <label className="input-group form-control">
