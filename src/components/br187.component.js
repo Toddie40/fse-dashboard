@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import clip from './../utils/mathutils'
 import Module from './module.component';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faQuoteRight, faArrowsAltH, faArrowsAltV, faMapMarkerAlt} from '@fortawesome/free-solid-svg-icons'
 
 export default class BR187 extends Module{
   
@@ -136,6 +137,10 @@ export default class BR187 extends Module{
               
               <div className="form-row py-2">
                 <label className="col-md-4">Project Name</label>
+                <div className="input-group">
+                                <div className="input-group-prepend">
+                                <div class="input-group-text"><FontAwesomeIcon icon={faQuoteRight} fixedWidth/></div>
+                                </div>
                 <input 
                   className="form-control"
                   type="text"
@@ -143,21 +148,36 @@ export default class BR187 extends Module{
                   value={this.state.title}
                   onChange={this.onChangeTitle}
                 />
+                </div>
               </div>
   
               <div className="form-row py-2">
                 <label>Radiator Geometry</label>
               </div>
+              
               <div className="form-row">
-                <input className="form-control col-md-6" type="number" step="0.001" value={this.state.width} onChange={this.onChangeWidth} placeholder="Width"></input>
-                
-                <input className="form-control col-md-6" type="number" step="0.001" value={this.state.height} onChange={this.onChangeHeight} placeholder="Height"></input>
-                
+              <div className="input-group  col-md-6">
+                                <div className="input-group-prepend">
+                                <div class="input-group-text"><FontAwesomeIcon icon={faArrowsAltH} fixedWidth/></div>
+                                </div>
+                <input className="form-control" type="number" step="0.001" value={this.state.width} onChange={this.onChangeWidth} placeholder="Width"></input>
+              </div>
+              <div className="input-group  col-md-6">
+                                <div className="input-group-prepend">
+                                <div class="input-group-text"><FontAwesomeIcon icon={faArrowsAltV} fixedWidth/></div>
+                                </div>
+                <input className="form-control" type="number" step="0.001" value={this.state.height} onChange={this.onChangeHeight} placeholder="Height"></input>
+                </div>
               </div>
   
               <div className="form-row py-2">
                 <label className="col-md-4">Separation Distance<small><br/>(Usually twice the boundary distance)</small></label>
+                <div className="input-group">
+                                <div className="input-group-prepend">
+                                <div class="input-group-text"><FontAwesomeIcon icon={faArrowsAltH} fixedWidth/></div>
+                                </div>
                 <input className="form-control" type="number" step="0.001" placeholder="Separation"value={this.state.separation} onChange={this.onChangeSeparation}></input>
+                </div>
               </div>
               
               <div className="form-group">

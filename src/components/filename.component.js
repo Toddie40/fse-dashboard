@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import ofrify from "./../utils/dateutils"
 import Module from './module.component';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faCalendar, faClipboard, faHashtag, faFolder, faLock, faQuoteRight, faHourglassHalf} from '@fortawesome/free-solid-svg-icons'
+
 
 export default class FileNameConvention extends Module{
     constructor(props){
@@ -100,17 +103,27 @@ export default class FileNameConvention extends Module{
         return(
                 <div className="card-body">
                     <form onSubmit={this.onSubmit.bind(this)} autoComplete="off">
-                        <div className="form-row">
+                        <div className="form-row">                            
                             <label className="col-md-2">Date</label>
-                            <input 
-                                className="form-control"
-                                type="date"
-                                value={this.state.date}
-                                onChange={this.onChangeDate}
-                            />
+                            <div className="input-group">
+                                <div className="input-group-prepend">
+                                <div class="input-group-text"><FontAwesomeIcon icon={faCalendar}/></div>
+                                </div>
+                                <input 
+                                    className="input-group form-control"
+                                    type="date"
+                                    value={this.state.date}
+                                    onChange={this.onChangeDate}
+                                />
+                            </div>
                         </div>
+
                         <div className="form-row">
                             <label className="col-md-2">Revsion</label>
+                            <div className="input-group">
+                                <div className="input-group-prepend">
+                                <div class="input-group-text"><FontAwesomeIcon icon={faClipboard}/></div>
+                                </div>
                             <select className="form-control" value={this.state.revision} onChange={this.onChangeRevision}>
                                 <option>Q00: First issue for internal review</option>
                                 <option>Q01: Reviewer's Comments</option>
@@ -120,37 +133,56 @@ export default class FileNameConvention extends Module{
                                 <option>R00: First Issue</option>
                                 <option>R01: Second Issue</option>
                             </select>
-
+                            </div>
                         </div>
                         <div className="form-row">
                             <label className="col-md-2">Project Number</label>
+                            <div className="input-group">
+                                <div className="input-group-prepend">
+                                <div class="input-group-text"><FontAwesomeIcon icon={faHashtag}/></div>
+                                </div>
                             <input 
                                 className="form-control"
                                 type="text"
                                 value={this.state.project}
                                 onChange={this.onChangeProject}
                             />
+                            </div>
                         </div>
                         <div className="form-row">
                             <label className="col-md-2">Project Stage</label>
+                            <div className="input-group">
+                                <div className="input-group-prepend">
+                                <div class="input-group-text"><FontAwesomeIcon icon={faHourglassHalf}/></div>
+                                </div>
                                 <input 
                                     className="form-control"
                                     type="text"
                                     value={this.state.stage}
                                     onChange={this.onChangeStage}
                                 />
+                                </div>
                         </div>
                         <div className="form-row">
                             <label className="col-md-2">File Title</label>
+                            <div className="input-group">
+                                <div className="input-group-prepend">
+                                <div class="input-group-text"><FontAwesomeIcon icon={faQuoteRight}/></div>
+                                </div>
                                 <input 
                                     className="form-control"
                                     type="text"
                                     value={this.state.title}
                                     onChange={this.onChangeTitle}
                                 />
+                                </div>
                         </div>
                         <div className="form-row">
                             <label className="col-md-2">Document Type</label>
+                            <div className="input-group">
+                                <div className="input-group-prepend">
+                                <div class="input-group-text"><FontAwesomeIcon icon={faFolder}/></div>
+                                </div>
                                 <select className="form-control" value={this.state.type} onChange={this.onChangeType}>
                                     <option>GA: General Admin</option>
                                     <option>MD: Marketing</option>
@@ -169,15 +201,21 @@ export default class FileNameConvention extends Module{
                                     <option>DW: Drawing</option>
                                     <option>XO: Expert Opinion</option>
                                 </select>
+                                </div>
                         </div>
                         <div className="form-row">
                             <label className="col-md-2">Security Status</label>
+                            <div className="input-group">
+                                <div className="input-group-prepend">
+                                <div class="input-group-text"><FontAwesomeIcon icon={faLock}/></div>
+                                </div>
                                 <select className="form-control" value={this.state.securityStatus} onChange={this.onChangeSecurityStatus}>
                                     <option>CIC: Commercial in Confidence</option>
                                     <option>WPC: Without Prejudice and Confidential</option>
                                     <option>SDS: Secure Document</option>
                                     <option>FID: Free Issue Document (no security status)</option>                                    
                                 </select>
+                                </div>
                         </div>
                         <hr/>
                         <div className="form-row">
