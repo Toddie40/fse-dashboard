@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Link, HashRouter as Router } from 'react-router-dom'
-import {Nav, Navbar, NavDropdown, Form, FormControl, Button} from 'react-bootstrap'
+import {Nav, Navbar, NavDropdown} from 'react-bootstrap'
 
 import logo from './img/logo-light.png';
 import './App.scss';

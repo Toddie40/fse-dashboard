@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import clip from './../utils/mathutils'
 import Module from './module.component';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -174,7 +174,7 @@ export default class BR187 extends Module{
                 <label className="col-md-4">Separation Distance<small><br/>(Usually twice the boundary distance)</small></label>
                 <div className="input-group">
                                 <div className="input-group-prepend">
-                                <div class="input-group-text"><FontAwesomeIcon icon={faArrowsAltH} fixedWidth/></div>
+                                <div class="input-group-text"><FontAwesomeIcon icon={faMapMarkerAlt} fixedWidth/></div>
                                 </div>
                 <input className="form-control" type="number" step="0.001" placeholder="Separation"value={this.state.separation} onChange={this.onChangeSeparation}></input>
                 </div>

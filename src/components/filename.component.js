@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ofrify from "./../utils/dateutils"
 import Module from './module.component';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -107,7 +107,7 @@ export default class FileNameConvention extends Module{
                             <label className="col-md-2">Date</label>
                             <div className="input-group">
                                 <div className="input-group-prepend">
-                                <div class="input-group-text"><FontAwesomeIcon icon={faCalendar}/></div>
+                                <div class="input-group-text"><FontAwesomeIcon icon={faCalendar} fixedWidth/></div>
                                 </div>
                                 <input 
                                     className="input-group form-control"
@@ -122,7 +122,7 @@ export default class FileNameConvention extends Module{
                             <label className="col-md-2">Revsion</label>
                             <div className="input-group">
                                 <div className="input-group-prepend">
-                                <div class="input-group-text"><FontAwesomeIcon icon={faClipboard}/></div>
+                                <div class="input-group-text"><FontAwesomeIcon icon={faClipboard} fixedWidth/></div>
                                 </div>
                             <select className="form-control" value={this.state.revision} onChange={this.onChangeRevision}>
                                 <option>Q00: First issue for internal review</option>
@@ -139,7 +139,7 @@ export default class FileNameConvention extends Module{
                             <label className="col-md-2">Project Number</label>
                             <div className="input-group">
                                 <div className="input-group-prepend">
-                                <div class="input-group-text"><FontAwesomeIcon icon={faHashtag}/></div>
+                                <div class="input-group-text"><FontAwesomeIcon icon={faHashtag} fixedWidth/></div>
                                 </div>
                             <input 
                                 className="form-control"
@@ -153,7 +153,7 @@ export default class FileNameConvention extends Module{
                             <label className="col-md-2">Project Stage</label>
                             <div className="input-group">
                                 <div className="input-group-prepend">
-                                <div class="input-group-text"><FontAwesomeIcon icon={faHourglassHalf}/></div>
+                                <div class="input-group-text"><FontAwesomeIcon icon={faHourglassHalf} fixedWidth/></div>
                                 </div>
                                 <input 
                                     className="form-control"
@@ -167,7 +167,7 @@ export default class FileNameConvention extends Module{
                             <label className="col-md-2">File Title</label>
                             <div className="input-group">
                                 <div className="input-group-prepend">
-                                <div class="input-group-text"><FontAwesomeIcon icon={faQuoteRight}/></div>
+                                <div class="input-group-text"><FontAwesomeIcon icon={faQuoteRight} fixedWidth/></div>
                                 </div>
                                 <input 
                                     className="form-control"
@@ -181,7 +181,7 @@ export default class FileNameConvention extends Module{
                             <label className="col-md-2">Document Type</label>
                             <div className="input-group">
                                 <div className="input-group-prepend">
-                                <div class="input-group-text"><FontAwesomeIcon icon={faFolder}/></div>
+                                <div class="input-group-text"><FontAwesomeIcon icon={faFolder} fixedWidth/></div>
                                 </div>
                                 <select className="form-control" value={this.state.type} onChange={this.onChangeType}>
                                     <option>GA: General Admin</option>
@@ -207,7 +207,7 @@ export default class FileNameConvention extends Module{
                             <label className="col-md-2">Security Status</label>
                             <div className="input-group">
                                 <div className="input-group-prepend">
-                                <div class="input-group-text"><FontAwesomeIcon icon={faLock}/></div>
+                                <div class="input-group-text"><FontAwesomeIcon icon={faLock} fixedWidth/></div>
                                 </div>
                                 <select className="form-control" value={this.state.securityStatus} onChange={this.onChangeSecurityStatus}>
                                     <option>CIC: Commercial in Confidence</option>

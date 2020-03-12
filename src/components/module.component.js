@@ -33,6 +33,7 @@ export default class Module extends Component {
                             <div className="col-md ml-auto justify-content-right" >
                                 <img
                                     className="module-header-logo"
+                                    alt="Header Logo"
                                     style={this.logostyle}
                                     src={this.logosrc}/>
                             </div>
