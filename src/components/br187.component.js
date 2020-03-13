@@ -335,11 +335,14 @@ class BR187Diagram extends Canvas {
     let width = Number(this.props.r_width)
     let height = Number(this.props.r_height)
     let sep = Number(this.props.sep)
+
+    //canvas and diagram properties
     let view_width = this.canvas.width;
     let view_height = this.canvas.height;
     let canvas_aspect_ratio = view_width / view_height;
     let diagram_height;
     let total_diagram_aspect_ratio;
+    let scale_dropoff = 0.005;
 
     let x_1;
     let x_2;
@@ -367,10 +370,12 @@ class BR187Diagram extends Canvas {
         }
         //need to draw 2 verticlally skewed rectangles and then move one of them 'separation' away from the other        
         
+        scale_dropoff *= scaleFactor;
+
         //draw receiver first because it's in the background
         this.ctx.fillStyle = colors.blue;
         this.ctx.setTransform(1, skew, 0, 1, scaleFactor*sep, 0);
-        this.ctx.fillRect(0, 0, scaleFactor * width / (1+0.1*sep), scaleFactor*height/ (1+0.1*sep));
+        this.ctx.fillRect(0, 0, scaleFactor * width / (1+scale_dropoff*sep), scaleFactor*height/ (1+scale_dropoff*sep));
         this.ctx.resetTransform();
         
         //then draw the measurement line
@@ -381,8 +386,8 @@ class BR187Diagram extends Canvas {
         y_1 = height / 2 + x_1 * skew
 
         //get center of second rectangle
-        x_2 = sep + (width/ (2*(1+0.1*sep) ))
-        y_2 = height/2 / (1+0.1*sep) + (x_2 - sep)*skew
+        x_2 = sep + (width/ (2*(1+scale_dropoff*sep) ))
+        y_2 = height/2 / (1+scale_dropoff*sep) + (x_2 - sep)*skew
         
         //scale them
         x_1 *= scaleFactor;
@@ -406,7 +411,7 @@ class BR187Diagram extends Canvas {
         else {
           scaleFactor= this.canvas.height / (height + (sep/3) + height/2)
         }
-        
+        scale_dropoff *= scaleFactor;
         //radiator
         this.ctx.fillStyle = colors.red;
         this.ctx.fillRect(0, 0, width * scaleFactor, height * scaleFactor);
@@ -435,7 +440,7 @@ class BR187Diagram extends Canvas {
 
         scaleFactor = view_width / (width + sep)
 
-        diagram_height = height + skew * width + (height/2 + skew * width/2)/ ( 1 + 0.1 * sep)
+        diagram_height = height + skew * width + (height/2 + skew * width/2)/ ( 1 + scale_dropoff * sep)
         total_diagram_aspect_ratio = (width + sep) / diagram_height;
 
         
@@ -443,15 +448,15 @@ class BR187Diagram extends Canvas {
           //then we need to adjust scale factor not based on width, but on height
           scaleFactor = view_height / (diagram_height);
         }
-
+        scale_dropoff *= scaleFactor;
         //centers that we need later on
         //get center of radiator rectangle
         x_1 = width / 2;
         y_1 = height / 2 + x_1 * skew
 
         //get center of receiver rectangle
-        x_2 = sep + x_1+ (width/ (2*(1+0.1*sep) ))
-        y_2 = y_1 + (height / 2 + width * skew / 2) / (1 + 0.1 * sep)
+        x_2 = sep + x_1+ (width/ (2*(1+scale_dropoff*sep) ))
+        y_2 = y_1 + (height / 2 + width * skew / 2) / (1 + scale_dropoff * sep)
         
 
         //need to draw 2 verticlally skewed rectangles and then move one of them 'separation' away from the other        
@@ -459,7 +464,7 @@ class BR187Diagram extends Canvas {
         //draw receiver first because it's in the background
         this.ctx.fillStyle = colors.blue;
         this.ctx.setTransform(1, skew, 0, 1, scaleFactor * (x_1 + sep), scaleFactor * y_1);
-        this.ctx.fillRect(0, 0, scaleFactor * width / (1+0.1*sep), scaleFactor*height/ (1+0.1*sep));
+        this.ctx.fillRect(0, 0, scaleFactor * width / (1+scale_dropoff*sep), scaleFactor*height/ (1+scale_dropoff*sep));
         this.ctx.resetTransform();
         
         //then draw the measurement line
