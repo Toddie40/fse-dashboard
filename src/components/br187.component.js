@@ -181,7 +181,7 @@ export default class BR187 extends Module{
                 </div>
               </div>
               <div className="form-row row">
-                <div className="form-group col-md-8">
+                <div className="form-group col-lg-8 col-md-6">
                   <label>Calculation type</label>
                   <div className="form-check col-md-4">
                   <input 
@@ -217,11 +217,13 @@ export default class BR187 extends Module{
                   <label className="form-check-label" for="corner">Corner</label>
                   </div>
                 </div>
-                <div className="col-md-4">
+                <div className="col-lg-4 col-md-6">
                   <div className="card ">
                   
-                  <div className="card-body">                    
+                  <div className="card-body">
+                    <div className="row justify-content-center">
                     <BR187Diagram r_width={this.state.width} r_height={this.state.height} sep={this.state.separation} type={this.state.type}/>
+                    </div>                    
                     <span className="badge pill-badge badge-primary br187-type-badge">{this.state.type}</span>
                   </div>
                   <div className="card-footer"><b>Indicative Diagram</b> for use as a visual aid only.</div>
