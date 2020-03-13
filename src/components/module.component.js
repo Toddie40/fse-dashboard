@@ -24,7 +24,7 @@ export default class Module extends Component {
     render(){
         return (
             <div className="container">
-                <div className="card shadow"> 
+                <div className="card module shadow"> 
                     <div className="card-header">
                         <div className="d-flex">
                             <h1 className="module-header-title col-md justify-content-center">
