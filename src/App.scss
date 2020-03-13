@@ -30,10 +30,7 @@ body {
   border-bottom: .3rem solid map-get($theme-colors, "dark");
   width: 100%;
 }
-.card {
-  
-  
-}
+
 .card-header {
   background-color: map-get($theme-colors , "primary");
   color: map-get($theme-colors, "white" );
