@@ -218,8 +218,14 @@ export default class BR187 extends Module{
                   </div>
                 </div>
                 <div className="col-md-4">
-                  <BR187Diagram r_width={this.state.width} r_height={this.state.height} sep={this.state.separation} type={this.state.type}/>
-                  <sm>This is only intended as an <b>indicative</b> diagram for use as a visual aid</sm>
+                  <div className="card ">
+                  
+                  <div className="card-body">                    
+                    <BR187Diagram r_width={this.state.width} r_height={this.state.height} sep={this.state.separation} type={this.state.type}/>
+                    <span className="badge pill-badge badge-primary br187-type-badge">{this.state.type}</span>
+                  </div>
+                  <div className="card-footer"><b>Indicative Diagram</b> for use as a visual aid only.</div>
+                </div>
                 </div>
               </div>
 
