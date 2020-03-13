@@ -181,7 +181,7 @@ export default class BR187 extends Module{
                 </div>
               </div>
               <div className="form-row row">
-                <div className="form-group col-md">
+                <div className="form-group col-md-8">
                   <label>Calculation type</label>
                   <div className="form-check col-md-4">
                   <input 
@@ -217,7 +217,7 @@ export default class BR187 extends Module{
                   <label className="form-check-label" for="corner">Corner</label>
                   </div>
                 </div>
-                <div className="col-md">
+                <div className="col-md-4">
                   <BR187Diagram r_width={this.state.width} r_height={this.state.height} sep={this.state.separation} type={this.state.type}/>
                   <sm>This is only intended as an <b>indicative</b> diagram for use as a visual aid</sm>
                 </div>
@@ -303,7 +303,7 @@ class Canvas extends React.Component {
     }
     return(
       <div className="canvas-container shadow">
-        <canvas ref="canvas" className="canvas" />
+        <canvas ref="canvas" className="canvas" height="300px" width="300px"/>
       </div>
     )
   }
@@ -316,6 +316,7 @@ class BR187Diagram extends Canvas {
     ctx.setLineDash(dash_props)
         ctx.beginPath();
         ctx.strokeStyle = col
+        ctx.lineWidth = 3;
         ctx.moveTo(x_1, y_1);
         ctx.lineTo(x_2,y_2);
         ctx.stroke();
@@ -324,10 +325,11 @@ class BR187Diagram extends Canvas {
   draw(){    
     this.ctx.resetTransform();
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
-    let alpha = '99'
+    let alpha = 'cc'
     let colors = {
-      red:'#bb0000'+alpha,
-      blue: '#0066bb'+alpha
+      red:'#dd4444'+alpha,
+      blue: '#00aaee',
+      white: '#ffffff'
     }
 
 
@@ -358,17 +360,17 @@ class BR187Diagram extends Canvas {
         skew = .5
         scaleFactor=1
 
-        scaleFactor = view_width / (width + sep)
+        scaleFactor = view_width / (width/2 + sep + width * scale_dropoff / 2)
 
         diagram_height = height + skew * width
-        total_diagram_aspect_ratio = (width + sep) / diagram_height;
+        total_diagram_aspect_ratio = (width/2 + sep + width *scale_dropoff / 2) / diagram_height;
 
         
         if (total_diagram_aspect_ratio < canvas_aspect_ratio) {
           //then we need to adjust scale factor not based on width, but on height
           scaleFactor = view_height / (diagram_height);
         }
-        //need to draw 2 verticlally skewed rectangles and then move one of them 'separation' away from the other        
+        //need to draw 2 vertically skewed rectangles and then move one of them 'separation' away from the other        
         
         scale_dropoff *= scaleFactor;
 
@@ -395,7 +397,7 @@ class BR187Diagram extends Canvas {
         y_1 *= scaleFactor;
         y_2 *= scaleFactor;
 
-        this.draw_dashed_line(this.ctx, x_1, y_1, x_2, y_2, [5,3], "black")
+        this.draw_dashed_line(this.ctx, x_1, y_1, x_2, y_2, [5,5], "white")
 
         //finally draw radiator
         this.ctx.setTransform(1, skew, 0, 1, 0, 0);
@@ -405,11 +407,17 @@ class BR187Diagram extends Canvas {
 
       case "perpendicular":
         skew = 1.5
-        if (width / height > 7 / 3) {
-          scaleFactor =this.canvas.width / (width + (sep/2) + skew*2)
+
+        diagram_height = height + sep/3 + height / 2
+        let diagram_width = width + sep/2 + height / 2 * skew
+        total_diagram_aspect_ratio = diagram_width / diagram_height;
+
+
+        if (total_diagram_aspect_ratio > canvas_aspect_ratio) {
+          scaleFactor =this.canvas.width / (diagram_width)
         }
         else {
-          scaleFactor= this.canvas.height / (height + (sep/3) + height/2)
+          scaleFactor= this.canvas.height / (diagram_height)
         }
         scale_dropoff *= scaleFactor;
         //radiator
@@ -423,7 +431,7 @@ class BR187Diagram extends Canvas {
         x_2 = (width/2 + sep/2) * scaleFactor
         y_2 = (height + sep/3) * scaleFactor
 
-        this.draw_dashed_line(this.ctx, x_1, y_1, x_2, y_2, [5,3], "black")
+        this.draw_dashed_line(this.ctx, x_1, y_1, x_2, y_2, [5,5], "white")
 
 
         //receiver
@@ -478,7 +486,7 @@ class BR187Diagram extends Canvas {
         y_2 *= scaleFactor;
 
 
-        this.draw_dashed_line(this.ctx, 2*x_1, 2*y_1, x_2, y_2, [5,3], "black")
+        this.draw_dashed_line(this.ctx, 2*x_1, 2*y_1, x_2, y_2, [5,5], "white")
 
         //finally draw radiator
         this.ctx.setTransform(1, skew, 0, 1, 0, 0);
